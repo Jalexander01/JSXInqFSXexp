@@ -2,17 +2,21 @@ import React from "react";
 import Card from "./Card.component.jsx";
 import contacts from "../contacts";
 
+function createCard(contacts) {
+  return (
+    <Card
+      name={contacts.name}
+      img={contacts.imgURL}
+      email={contacts.email}
+      tel={contacts.phone}
+    />
+  );
+}
+
 function App() {
   return (
     <div>
-      {contacts.map((contact) => (
-        <Card
-          name={contact.name}
-          img={contact.imgURL}
-          email={contact.email}
-          tel={contact.phone}
-        />
-      ))}
+      {contacts.map(createCard)}
 
       {/* <Card
         name={contacts[0].name}
