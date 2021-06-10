@@ -5,6 +5,8 @@ import contacts from "../contacts";
 function createCard(contact) {
   return (
     <Card
+      id={contact.id}
+      key={contact.id}
       name={contact.name}
       img={contact.imgURL}
       email={contact.email}
