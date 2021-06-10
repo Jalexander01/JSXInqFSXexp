@@ -5,7 +5,16 @@ import contacts from "../contacts";
 function App() {
   return (
     <div>
-      <Card
+      {contacts.map((contact) => (
+        <Card
+          name={contact.name}
+          img={contact.imgURL}
+          email={contact.email}
+          tel={contact.phone}
+        />
+      ))}
+
+      {/* <Card
         name={contacts[0].name}
         img={contacts[0].imgURL}
         email={contacts[0].email}
@@ -22,7 +31,7 @@ function App() {
         img={contacts[2].imgURL}
         email={contacts[2].email}
         tel={contacts[2].phone}
-      />
+      /> */}
     </div>
   );
 }
