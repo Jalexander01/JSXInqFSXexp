@@ -2,13 +2,13 @@ import React from "react";
 import Card from "./Card.component.jsx";
 import contacts from "../contacts";
 
-function createCard(contacts) {
+function createCard(contact) {
   return (
     <Card
-      name={contacts.name}
-      img={contacts.imgURL}
-      email={contacts.email}
-      tel={contacts.phone}
+      name={contact.name}
+      img={contact.imgURL}
+      email={contact.email}
+      tel={contact.phone}
     />
   );
 }
